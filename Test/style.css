@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #93efff, #fdbffa);
+    transition: margin-left 0.3s ease; /* Smooth transition for main content */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Default expanded width */
+    background-color: #FFDD00;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease; /* Smooth transition for collapsing */
+    overflow: hidden; /* Hide content when collapsed */
+}
+
+.sidebar.collapsed {
+    width: 70px; /* Collapsed width */
+}
+
+.logo-section {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: opacity 0.3s ease; /* Smooth logo transition */
+}
+
+.logo-section img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sidebar.collapsed .logo-section img {
+    opacity: 0; /* Hide the logo when collapsed */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: background 0.3s, font-size 0.3s ease;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar.collapsed .menu a {
+    font-size: 0; /* Hide text when collapsed */
+    padding: 0.5rem; /* Shrink padding */
+}
+
+.logout-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.sidebar.collapsed .logout-section {
+    font-size: 0; /* Hide text when collapsed */
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    left: 260px; /* Position to the right of the sidebar */
+    z-index: 1000;
+    background: #FFDD00;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+.sidebar.collapsed + .sidebar-toggle {
+    left: 80px; /* Adjust position when collapsed */
+}

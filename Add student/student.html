@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-section">
+            <img src="kids.jpeg">
+        </div>
+        <nav class="menu">
+            <a href="#">Account</a>
+            <a href="#">System</a>
+            <a href="#">Add Student</a>
+            <a href="#">Fee</a>
+        </nav>
+        <div class="logout-section">
+            <a href="#">&#x2190;</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="collapse-button">&#9776;</button>
+        <div class="header">
+            <div class="time">08:27am</div>
+            <div class="user"> 
+                <label for="role-toggle">Teacher</label>
+            </div>
+        </div>
+        <section class="content">
+            <div class="header-container">
+                <h1>Add student</h1>
+            </div>
+
+            <div class="container">
+                <form class="form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <input type="text" id="grade" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Birthday:</label>
+                        <div class="birthday">
+                            <input type="text" id="day" maxlength="2" placeholder="DD">
+                            <span>/</span>
+                            <input type="text" id="month" maxlength="2" placeholder="MM">
+                            <span>/</span>
+                            <input type="text" id="year" maxlength="4" placeholder="YYYY">
+                            <button type="button" id="calendar-btn">📅</button>
+                            <input type="date" id="calendar" style="display: none;"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transport">Transport:</label>
+                        <input type="checkbox" id="transport">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent">Parent:</label>
+                        <input type="text" id="parent" placeholder="">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="student.js"></script>
+</body>
+</html>
