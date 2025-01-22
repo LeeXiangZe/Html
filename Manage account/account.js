@@ -6,6 +6,24 @@ toggleButton.addEventListener('click', () => {
     sidebar.style.visibility = sidebar.classList.contains('collapsed') ? 'hidden' : 'visible';
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".dropdown-btn").addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents closing when clicking inside
+        this.parentElement.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking anywhere outside
+    document.addEventListener("click", function (event) {
+        let dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("active");
+            }
+        });
+    });
+});
+
+
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("myTable2");
