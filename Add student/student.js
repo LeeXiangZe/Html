@@ -6,6 +6,24 @@ toggleButton.addEventListener('click', () => {
     sidebar.style.visibility = sidebar.classList.contains('collapsed') ? 'hidden' : 'visible';
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".dropdown-btn").addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents closing when clicking inside
+        this.parentElement.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking anywhere outside
+    document.addEventListener("click", function (event) {
+        let dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("active");
+            }
+        });
+    });
+});
+
+
 document.getElementById("calendar-btn").addEventListener("click", function () {
     const calendarInput = document.getElementById("calendar");
     calendarInput.style.display = "block"; // Temporarily display the date picker
