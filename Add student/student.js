@@ -7,21 +7,32 @@ toggleButton.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".dropdown-btn").addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents closing when clicking inside
-        this.parentElement.classList.toggle("active");
-    });
+    const dropdowns = document.querySelectorAll(".dropdown");
 
-    // Close dropdown when clicking anywhere outside
-    document.addEventListener("click", function (event) {
-        let dropdowns = document.querySelectorAll(".dropdown");
-        dropdowns.forEach(dropdown => {
-            if (!dropdown.contains(event.target)) {
-                dropdown.classList.remove("active");
-            }
+    dropdowns.forEach((dropdown) => {
+        const btn = dropdown.querySelector(".dropdown-btn");
+        btn.addEventListener("click", function (event) {
+            // Prevent closing all dropdowns when opening one
+            event.stopPropagation();
+
+            // Close other dropdowns before opening the clicked one
+            dropdowns.forEach((d) => {
+                if (d !== dropdown) {
+                    d.classList.remove("active");
+                }
+            });
+
+            // Toggle active class on clicked dropdown
+            dropdown.classList.toggle("active");
         });
     });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function () {
+        dropdowns.forEach((dropdown) => dropdown.classList.remove("active"));
+    });
 });
+
 
 
 document.getElementById("calendar-btn").addEventListener("click", function () {
