@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit role</title>
+    <link rel="stylesheet" href="rolePermission.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-section">
+            <img src="kids.jpeg">
+        </div>
+        <nav class="menu">
+            <div class="dropdown">
+                <button class="dropdown-btn">Account</button>
+                <div class="dropdown-content">
+                    <a href="#">Manage account</a>
+                    <a href="#">Create account</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">System</button>
+                <div class="dropdown-content">
+                    <a href="#">Configure system</a>
+                    <a href="#">Fee structure</a>
+                    <a href="#">Role permission</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Student</button>
+                <div class="dropdown-content">
+                    <a href="#">Add student</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Fee</button>
+                <div class="dropdown-content">
+                    <a href="#">View & edit bill</a>
+                    <a href="#">Update bill</a>
+                    <a href="#">Create bill bunch</a>
+                    <a href="#">Create bill single</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Payment</button>
+                <div class="dropdown-content">
+                    <a href="#">Payment tracking</a>
+                </div>
+            </div>
+        </nav>
+        <div class="logout-section">
+            <a href="#">&#x2190;</a>
+        </div>
+    </div>
+
+    <button class="collapse-button">&#9776;</button>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <div class="time">08:27am</div>
+            <div class="admin-section">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="header-container">
+                <div class="left-section">
+                    <h1>Edit Role</h1>
+                    <div class="role">
+                        <select id="role">
+                            <option value="teacher">Teacher</option>
+                            <option value="admin">Accountant</option>
+                            <option value="parent">Parent</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by feature">
+                    <button>&#x27A4;</button>
+                </div>
+            </div>
+            <div class="container">
+                <form class="form">
+                    <div class="form-group">
+                        <label for="edit-bill">Edit bill:</label>
+                        <select id="edit-bill">
+                            <option value="allow">Allow</option>
+                            <option value="deny">Deny</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="add-student">Add student:</label>
+                        <select id="add-student">
+                            <option value="allow">Allow</option>
+                            <option value="deny">Deny</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="view-financial-report">View financial report:</label>
+                        <select id="view-financial-report">
+                            <option value="allow">Allow</option>
+                            <option value="deny">Deny</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-tracking">Payment tracking:</label>
+                        <select id="payment-tracking">
+                            <!-- <option value="">Select Role</option> -->
+                            <option value="allow">Allow</option>
+                            <option value="deny">Deny</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="rolePermission.js"></script>
+</body>
+
+</html>
