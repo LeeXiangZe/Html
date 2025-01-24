@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student</title>
-    <link rel="stylesheet" href="addStudent.css">
+    <title>Fee Structure</title>
+    <link rel="stylesheet" href="feeStructure.css">
 </head>
 <body>
     <!-- Sidebar -->
@@ -62,42 +62,24 @@
         </div>
         <section class="content">
             <div class="header-container">
-                <h1>Add student</h1>
+                <h1>Fee Structure</h1>
             </div>
 
             <div class="container">
                 <form class="form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" placeholder="">
+                        <label for="penalty">Penalty amount(RM):</label>
+                        <input type="text" id="penalty" placeholder="150">
                     </div>
 
                     <div class="form-group">
-                        <label for="grade">Grade:</label>
-                        <input type="text" id="grade" placeholder="">
+                        <label for="period">Penalty period(Days):</label>
+                        <input type="text" id="period" placeholder="15">
                     </div>
 
                     <div class="form-group">
-                        <label>Birthday:</label>
-                        <div class="birthday">
-                            <input type="text" id="day" maxlength="2" placeholder="DD">
-                            <span>/</span>
-                            <input type="text" id="month" maxlength="2" placeholder="MM">
-                            <span>/</span>
-                            <input type="text" id="year" maxlength="4" placeholder="YYYY">
-                            <button type="button" id="calendar-btn">📅</button>
-                            <input type="date" id="calendar" style="display: none;"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="transport">Transport:</label>
-                        <input type="checkbox" id="transport">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="parent">Parent:</label>
-                        <input type="text" id="parent" placeholder="">
+                        <label for="discount">Discount amount(RM):</label>
+                        <input type="text" id="discount" placeholder="20">
                     </div>
 
                     <div class="form-actions">
@@ -108,6 +90,6 @@
             </div>
         </section>
     </div>
-    <script src="addtudent.js"></script>
+    <script src="feeStructure.js"></script>
 </body>
 </html>
