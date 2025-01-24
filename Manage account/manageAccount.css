@@ -348,19 +348,20 @@ table tbody tr:last-child td {
 }
 
 .role {
+    text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 
 .role:hover + .edit {
     visibility: visible;
 }
 
-.delete-icon {
+.delete-btn {
     color: red;
     font-size: 1.2rem;
     cursor: pointer;
+    border: none;
+    background-color: white;
 }
 
-.delete-icon:hover {
-    text-decoration: underline;
-}
