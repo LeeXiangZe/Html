@@ -86,46 +86,59 @@
                 </div>
             </div>
             <div class="container">
-                <form class="form">
-                    <div class="form-group">
-                        <label for="edit-bill">Edit bill:</label>
-                        <select id="edit-bill">
-                            <option value="allow">Allow</option>
-                            <option value="deny">Deny</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="add-student">Add student:</label>
-                        <select id="add-student">
-                            <option value="allow">Allow</option>
-                            <option value="deny">Deny</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="view-financial-report">View financial report:</label>
-                        <select id="view-financial-report">
-                            <option value="allow">Allow</option>
-                            <option value="deny">Deny</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="payment-tracking">Payment tracking:</label>
-                        <select id="payment-tracking">
-                            <!-- <option value="">Select Role</option> -->
-                            <option value="allow">Allow</option>
-                            <option value="deny">Deny</option>
-                        </select>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="submit" class="save-btn">Save</button>
-                        <button type="button" class="cancel-btn">Cancel</button>
-                    </div>
-                </form>
+                <table id="myTable2">
+                    <thead>
+                        <tr>
+                            <th class="feature-header" onclick="sortTable(0)">Feature<span class="sort"></span></th>
+                            <th class="permission-header" onclick="sortTable(1)">Permission<span class="sort"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Edit bill</td>
+                            <td>
+                                <select id="edit-bill">
+                                    <option value="allow">Allow</option>
+                                    <option value="deny">Deny</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Add student</td>
+                            <td>
+                                <select id="add-student">
+                                    <option value="allow">Allow</option>
+                                    <option value="deny">Deny</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>View financial report</td>
+                            <td>
+                                <select id="view-financial-report">
+                                    <option value="allow">Allow</option>
+                                    <option value="deny">Deny</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Payment tracking</td>
+                            <td>
+                                <select id="payment-tracking">
+                                    <option value="allow">Allow</option>
+                                    <option value="deny">Deny</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="form-actions">
+                    <button type="submit" class="save-btn">Save</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
             </div>
+            
         </section>
     </div>
     <script src="rolePermission.js"></script>

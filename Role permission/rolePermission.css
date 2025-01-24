@@ -333,6 +333,7 @@ body {
 
 /* Container */
 .container {
+    position: relative; /* Makes absolute positioning inside work */
     margin: auto;
     width: 90%;
     background: white;
@@ -340,19 +341,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px 30px;
     overflow-y: auto;
-}
-
-/* Form Styles */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+    padding-bottom: 100px; /* Adds space for the buttons */
 }
 
 select {
@@ -365,28 +354,43 @@ select {
     background: #f7f7f7;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-label {
-    flex: 0 0 250px;
-    /* Fixed width for labels */
+table th, table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background: #f0f0f0;
     font-weight: bold;
+    cursor: pointer;
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-left: 10px;
-    background: #f7f7f7;
+.sort {
+    font-size: 1.2rem; /* Increase font size */
+    color: #555; /* Adjust color as needed */
+    vertical-align: middle; /* Align the symbol vertically */
 }
 
-/* Action Buttons */
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
 .form-actions {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
+    gap: 10px;
 }
 
 .save-btn,
