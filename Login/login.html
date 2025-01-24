@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" type="image/x-icon" href="icon.png">
-    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 </head>
 <body>
     <div class="login-container">
@@ -25,9 +25,9 @@
             <a href="#" class="forgot-password">Forgot Password?</a>
         </div>
         <div class="decoration">
-            <img class="kids" src="kids.jpeg" alt="Kids image">
+            <img class="kids" src="{{ url_for('static', filename='images/kids.jpeg') }}" alt="Kids image">
         </div>
     </div>
-    <script src="login.js"></script>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
 </body>
 </html>
