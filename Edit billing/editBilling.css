@@ -274,8 +274,14 @@ h3 {
     color: blue;
 }
 
-.toggle {
+select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
     margin-left: 10px;
+    background: #f7f7f7;
 }
 
 /* Container */
@@ -303,7 +309,7 @@ h3 {
 }
 
 label {
-    flex: 0 0 150px;
+    flex: 0 0 250px;
     /* Fixed width for labels */
     font-weight: bold;
 }
@@ -316,15 +322,6 @@ input[type="text"] {
     font-size: 14px;
     margin-left: 10px;
     background: #f7f7f7;
-}
-
-input[type="checkbox"] {
-    margin-left: 10px;
-    justify-content: flex-start;
-    width: auto;
-    text-align: left;
-    display: flex;
-    font-size: 100%;
 }
 
 /* Birthday Section */
@@ -378,6 +375,24 @@ input[type="checkbox"] {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: #007bff;
+    color: white;
+    margin-left: 10px;
+}
+
+.download-btn:hover {
+    background: #0056b3;
 }
 
 .save-btn,

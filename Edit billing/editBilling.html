@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Bill</title>
     <link rel="stylesheet" href="editBilling.css">
 </head>
+
 <body>
     <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
@@ -59,7 +61,7 @@
         <button class="collapse-button">&#9776;</button>
         <div class="header">
             <div class="time">08:27am</div>
-            <div class="user"> 
+            <div class="user">
                 <label for="role-toggle">Admin</label>
             </div>
         </div>
@@ -73,17 +75,27 @@
             <div class="container">
                 <form class="form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" placeholder="">
+                        <label for="details">Details:</label>
+                        <select id="detail1">
+                            <option value="tuition">Tuition</option>
+                        </select>
+                        <select id="detail2">
+                            <option value="lunch">Lunch</option>
+                        </select>
+                        <select id="detail3">
+                            <option value="transport">Transport</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="grade">Grade:</label>
-                        <input type="text" id="grade" placeholder="">
+                        <label for="price">Price(RM):</label>
+                        <input type="text" id="price1" placeholder="">
+                        <input type="text" id="price2" placeholder="">
+                        <input type="text" id="price3" placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label>Birthday:</label>
+                        <label>Due date:</label>
                         <div class="birthday">
                             <input type="text" id="day" maxlength="2" placeholder="DD">
                             <span>/</span>
@@ -91,18 +103,18 @@
                             <span>/</span>
                             <input type="text" id="year" maxlength="4" placeholder="YYYY">
                             <button type="button" id="calendar-btn">📅</button>
-                            <input type="date" id="calendar" style="display: none;"/>
+                            <input type="date" id="calendar" style="display: none;" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="transport">Transport:</label>
-                        <input type="checkbox" id="transport">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author">
                     </div>
 
                     <div class="form-group">
-                        <label for="parent">Parent:</label>
-                        <input type="text" id="parent" placeholder="">
+                        <label for="download">Download Invoice Preview:</label>
+                        <button type="download-btn" class="download-btn">Download</button>
                     </div>
 
                     <div class="form-actions">
@@ -115,4 +127,5 @@
     </div>
     <script src="editBilling.js"></script>
 </body>
+
 </html>
