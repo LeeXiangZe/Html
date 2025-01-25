@@ -33,9 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
 document.getElementById("calendar-btn").addEventListener("click", function () {
     const calendarInput = document.getElementById("calendar");
     calendarInput.style.display = "block"; // Temporarily display the date picker
