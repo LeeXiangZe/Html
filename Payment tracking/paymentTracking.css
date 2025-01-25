@@ -331,6 +331,7 @@ table th {
     background: #f0f0f0;
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
 }
 
 .sort {
