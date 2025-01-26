@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Account</title>
+    <title>Student Detail</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
     <link rel="stylesheet" href="studentDetail.css">
 </head>
+
 <body>
     <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
@@ -15,41 +17,17 @@
         </div>
         <nav class="menu">
             <div class="dropdown">
-                <button class="dropdown-btn">Account</button>
-                <div class="dropdown-content">
-                    <a href="#">Manage account</a>
-                    <a href="#">Create account</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-btn">System</button>
-                <div class="dropdown-content">
-                    <a href="#">Configure system</a>
-                    <a href="#">Fee structure</a>
-                    <a href="#">Role permission</a>
-                </div>
-            </div>
-            <div class="dropdown">
                 <button class="dropdown-btn">Student</button>
                 <div class="dropdown-content">
                     <a href="#">Add student</a>
+                    <a href="#">View details</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropdown-btn">Fee</button>
                 <div class="dropdown-content">
-                    <a href="#">View & edit bill</a>
-                    <a href="#">Update bill</a>
-                    <a href="#">Create bill bunch</a>
-                    <a href="#">Create bill single</a>
+                    <a href="#">Fee overview</a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-btn">Payment</button>
-                <div class="dropdown-content">
-                    <a href="#">Payment tracking</a>
-                </div>
-            </div>
         </nav>
         <div class="logout-section">
             <a href="#">&#x2190;</a>
@@ -63,13 +41,16 @@
         <header class="header">
             <div class="time">08:27am</div>
             <div class="admin-section">
-                <span>Admin</span>
+                <span>Teacher</span>
             </div>
         </header>
 
         <section class="content">
             <div class="header-container">
-                <h1>Manage Account</h1>
+                <div class="header-left">
+                    <h1>Student Details</h1>
+                    <h2>Grade 1</h2>
+                </div>
                 <div class="search-bar">
                     <input type="text" placeholder="Search by name">
                     <button>&#x27A4;</button>
@@ -80,9 +61,10 @@
                     <tr>
                         <th onclick="sortTable(0)"># <span class="sort"></span></th>
                         <th onclick="sortTable(1)">Name <span class="sort"></span></th>
-                        <th onclick="sortTable(2)">Role <span class="sort"></span></th>
-                        <th onclick="sortTable(3)">Date Created <span class="sort"></span></th>
-                        <th>Delete Account</th>
+                        <th onclick="sortTable(2)">Parent <span class="sort"></span></th>
+                        <th onclick="sortTable(3)">Birthday <span class="sort"></span></th>
+                        <th onclick="sortTable(4)">Age <span class="sort"></span></th>
+                        <th onclick="sortTable(5)">Transport <span class="sort"></span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,15 +73,24 @@
                             <span class="id">1</span>
                         </td>
                         <td>
-                            <span class="name">Adolf Yeoh</span></td>
+                            <span class="name">Adolf Yeoh</span>
+                        </td>
                         </td>
                         <td>
-                            <a href='#' span class="role">Teacher</span></a>
-                            <span class="edit">&#9998;</span>
+                            <span class="parent">Foreen Yeoh</span>
                         </td>
-                        <td>1/1/2025</td>
+                        </td>
                         <td>
-                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
+                            <span class="dob">1/3/2020</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="age">4</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="transport">1</span>
+                        </td>
                         </td>
                     </tr>
                     <tr>
@@ -107,15 +98,24 @@
                             <span class="id">2</span>
                         </td>
                         <td>
-                            <span class="name">Bdolf Yeoh</span></td>
+                            <span class="name">Bdolf Yeoh</span>
+                        </td>
                         </td>
                         <td>
-                            <a href='#' span class="role">Accountant</span></a>
-                            <span class="edit">&#9998;</span>
+                            <span class="parent">Goreen Yeoh</span>
                         </td>
-                        <td>1/2/2025</td>
+                        </td>
                         <td>
-                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
+                            <span class="dob">1/3/2021</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="age">3</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="transport">0</span>
+                        </td>
                         </td>
                     </tr>
                     <tr>
@@ -123,15 +123,24 @@
                             <span class="id">3</span>
                         </td>
                         <td>
-                            <span class="name">Cdolf Yeoh</span></td>
+                            <span class="name">Cdolf Yeoh</span>
+                        </td>
                         </td>
                         <td>
-                            <a href='#' span class="role">Teacher</span></a>
-                            <span class="edit">&#9998;</span>
+                            <span class="parent">Horeen Yeoh</span>
                         </td>
-                        <td>1/6/2025</td>
+                        </td>
                         <td>
-                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
+                            <span class="dob">5/3/2021</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="age">4</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="transport">0</span>
+                        </td>
                         </td>
                     </tr>
                     <tr>
@@ -139,15 +148,24 @@
                             <span class="id">4</span>
                         </td>
                         <td>
-                            <span class="name">Ddolf Yeoh</span></td>
+                            <span class="name">Edolf Yeoh</span>
+                        </td>
                         </td>
                         <td>
-                            <a href='#' span class="role">Parent</span></a>
-                            <span class="edit">&#9998;</span>
+                            <span class="parent">Ioreen Yeoh</span>
                         </td>
-                        <td>15/1/2025</td>
+                        </td>
                         <td>
-                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
+                            <span class="dob">10/9/2019</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="age">5</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="transport">1</span>
+                        </td>
                         </td>
                     </tr>
                     <tr>
@@ -155,15 +173,24 @@
                             <span class="id">5</span>
                         </td>
                         <td>
-                            <span class="name">Edolf Yeoh</span></td>
+                            <span class="name">Ddolf Yeoh</span>
+                        </td>
                         </td>
                         <td>
-                            <a href='#' span class="role">Parent</span></a>
-                            <span class="edit">&#9998;</span>
+                            <span class="parent">Joreen Yeoh</span>
                         </td>
-                        <td>2/2/2025</td>
+                        </td>
                         <td>
-                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
+                            <span class="dob">13/3/2020</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="age">3</span>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="transport">1</span>
+                        </td>
                         </td>
                     </tr>
                 </tbody>
@@ -172,4 +199,5 @@
     </div>
     <script src="studentDetail.js"></script>
 </body>
+
 </html>

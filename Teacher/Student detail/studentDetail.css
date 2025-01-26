@@ -231,10 +231,16 @@ body {
 }
 
 .header-container {
-    display: flex; /* Use flexbox to align items */
-    justify-content: space-between; /* Space between the heading and search bar */
-    align-items: center; /* Align items vertically in the center */
-    margin-bottom: 1rem; /* Add some space below the header */
+    display: flex;
+    justify-content: space-between;  /* Space out the items */
+    align-items: center;  /* Align the items vertically */
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;  /* Stack the title and grade vertically */
+    align-items: flex-start;  /* Align the items to the left */
 }
 
 .search-bar {
@@ -307,9 +313,16 @@ body {
 }
 
 .content h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: blue;
 }
 
 table {
@@ -343,26 +356,3 @@ table th {
 table tbody tr:last-child td {
     border-bottom: none;
 }
-
-.edit {
-    visibility: hidden;
-}
-
-.role {
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-}
-
-.role:hover + .edit {
-    visibility: visible;
-}
-
-.delete-btn {
-    color: red;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border: none;
-    background-color: white;
-}
-
