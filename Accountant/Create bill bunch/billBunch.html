@@ -15,7 +15,44 @@
         <div class="logo-section">
             <img src="kids.jpeg">
         </div>
-        Admin/Create bill single
+        <nav class="menu">
+            <div class="dropdown">
+                <button class="dropdown-btn">Account</button>
+                <div class="dropdown-content">
+                    <a href="#">Manage account</a>
+                    <a href="#">Create account</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">System</button>
+                <div class="dropdown-content">
+                    <a href="#">Configure system</a>
+                    <a href="#">Fee structure</a>
+                    <a href="#">Role permission</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Student</button>
+                <div class="dropdown-content">
+                    <a href="#">Add student</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Fee</button>
+                <div class="dropdown-content">
+                    <a href="#">View & edit bill</a>
+                    <a href="#">Update bill</a>
+                    <a href="#">Create bill bunch</a>
+                    <a href="#">Create bill single</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Payment</button>
+                <div class="dropdown-content">
+                    <a href="#">Payment tracking</a>
+                </div>
+            </div>
+        </nav>
         <div class="logout-section">
             <a href="#">&#x2190;</a>
         </div>
@@ -84,7 +121,9 @@
 
                     <div class="form-group">
                         <label for="download">Download Invoice Preview:</label>
-                        <button class="download-btn">Download</button>
+                        <button type="button" class="download-btn" id="download-btn">
+                            Download
+                        </button>
                     </div>
 
                     <div class="form-actions">

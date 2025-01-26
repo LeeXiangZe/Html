@@ -52,3 +52,15 @@ document.getElementById("calendar").addEventListener("change", function () {
 
     this.style.display = "none"; // Hide the date picker again
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('download-btn').addEventListener('click', function() {
+        const fileUrl = 'invoice.pdf'; // Ensure this is the correct file path
+        const anchor = document.createElement('a');
+        anchor.href = fileUrl;
+        anchor.download = 'Invoice_1003.pdf'; // Use a simple filename
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+    });
+});
