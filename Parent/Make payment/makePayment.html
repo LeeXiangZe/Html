@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="makePayment.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-section">
+            <img src="kids.jpeg">
+        </div>
+        <nav class="menu">
+            <div class="dropdown">
+                <button class="dropdown-btn">Payment</button>
+                <div class="dropdown-content">
+                    <a href="#">Make payment</a>
+                    <a href="#">View history</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Notification</button>
+                <div class="dropdown-content">
+                    <a href="#">View notification</a>
+                </div>
+            </div>
+        </nav>
+        <div class="logout-section">
+            <a href="#">&#x2190;</a>
+        </div>
+    </div>
+
+    <button class="collapse-button">&#9776;</button>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <div class="time">08:27am</div>
+            <div class="admin-section">
+                <span>Parent</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="header-container">
+                <div class="header-left">
+                    <h1>Make Payment</h1>
+                    <h2>Yeoh Han Mm</h2>
+                </div>
+                <div class="header-right">
+                    <h1 class="overdue">Total overdue: RM
+                        <span class="overdue-amount">330</span>
+                    </h1>
+                    <select id="payment-method" class="payment-method">
+                        <option value="select">Select payment method</option>
+                        <option value="online-banking">Online banking</option>
+                        <option value="card">Cards</option>
+                    </select>
+                    <button class="submit-btn" id="submit-btn">
+                        Submit payment
+                    </button>
+                </div>
+            </div>
+            <table id="myTable2">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)"># <span class="sort"></span></th>
+                        <th onclick="sortTable(1)">Invoice <span class="sort"></span></th>
+                        <th onclick="sortTable(2)">Details <span class="sort"></span></th>
+                        <th onclick="sortTable(3)">Charges <span class="sort"></span></th>
+                        <th onclick="sortTable(4)">Due date <span class="sort"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="id">1</span>
+                        </td>
+                        <td>
+                            <span class="invoice">
+                                <a href="#">#3123</a>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="details">Tuition</span>
+                        </td>
+                        <td>
+                            <span class="charges">120</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">23/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">2</span>
+                        </td>
+                        <td>
+                            <span class="invoice">
+                                <a href="#">#3123</a>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="details">Lunch</span>
+                        </td>
+                        <td>
+                            <span class="charges">50</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">23/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">3</span>
+                        </td>
+                        <td>
+                            <span class="invoice">
+                                <a href="#">#3123</a>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="details">Transport</span>
+                        </td>
+                        <td>
+                            <span class="charges">120</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">23/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">4</span>
+                        </td>
+                        <td>
+                            <span class="invoice">
+                                <a href="#">#3125</a>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="details">New books</span>
+                        </td>
+                        <td>
+                            <span class="charges">120</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">25/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">5</span>
+                        </td>
+                        <td>
+                            <span class="invoice">
+                                <a href="#">#3125</a>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="details">New stationary</span>
+                        </td>
+                        <td>
+                            <span class="charges">50</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">25/03/2015</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="makePayment.js"></script>
+</body>
+
+</html>
