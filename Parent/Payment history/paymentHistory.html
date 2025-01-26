@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="paymentHistory.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-section">
+            <img src="kids.jpeg">
+        </div>
+        <nav class="menu">
+            <div class="dropdown">
+                <button class="dropdown-btn">Payment</button>
+                <div class="dropdown-content">
+                    <a href="#">Make payment</a>
+                    <a href="#">View history</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Notification</button>
+                <div class="dropdown-content">
+                    <a href="#">View notification</a>
+                </div>
+            </div>
+        </nav>
+        <div class="logout-section">
+            <a href="#">&#x2190;</a>
+        </div>
+    </div>
+
+    <button class="collapse-button">&#9776;</button>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <div class="time">08:27am</div>
+            <div class="admin-section">
+                <span>Parent</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="header-container">
+                <div class="header-left">
+                    <h1>Payment history</h1>
+                    <h2>Yeoh Han Lok</h2>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button>&#x27A4;</button>
+                </div>
+            </div>
+            <table id="myTable2">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)"># <span class="sort"></span></th>
+                        <th onclick="sortTable(1)">Receipt <span class="sort"></span></th>
+                        <th onclick="sortTable(2)">Invoice <span class="sort"></span></th>
+                        <th onclick="sortTable(3)">Charges <span class="sort"></span></th>
+                        <th onclick="sortTable(4)">Due date <span class="sort"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="id">1</span>
+                        </td>
+                        <td>
+                            <a href="#"><span class="receipt">#3030</span></a>
+                        </td>
+                        <td>
+                            <a href="#"><span class="invoice">#3031</span></a>
+                        </td>
+                        <td>
+                            <span class="charges">330</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">23/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">2</span>
+                        </td>
+                        <td>
+                            <a href="#"><span class="receipt">#3032</span></a>
+                        </td>
+                        <td>
+                            <a href="#"><span class="invoice">#3031</span></a>
+                        </td>
+                        <td>
+                            <span class="charges">200</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">07/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">3</span>
+                        </td>
+                        <td>
+                            <a href="#"><span class="receipt">#3032</span></a>
+                        </td>
+                        <td>
+                            <a href="#"><span class="invoice">#3037</span></a>
+                        </td>
+                        <td>
+                            <span class="charges">130</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">23/12/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">4</span>
+                        </td>
+                        <td>
+                            <a href="#"><span class="receipt">#1231</span></a>
+                        </td>
+                        <td>
+                            <a href="#"><span class="invoice">#1234</span></a>
+                        </td>
+                        <td>
+                            <span class="charges">230</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">12/03/2015</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="id">5</span>
+                        </td>
+                        <td>
+                            <a href="#"><span class="receipt">#3023</span></a>
+                        </td>
+                        <td>
+                            <a href="#"><span class="invoice">#2311</span></a>
+                        </td>
+                        <td>
+                            <span class="charges">250</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">23/12/2015</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="paymentHistory.js"></script>
+</body>
+
+</html>
