@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Billing</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="updateBiling.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-section">
+            <img src="kids.jpeg">
+        </div>
+        <nav class="menu">
+            <div class="dropdown">
+                <button class="dropdown-btn">Fee</button>
+                <div class="dropdown-content">
+                    <a href="#">View & edit bill</a>
+                    <a href="#">Update bill</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Create bill</button>
+                <div class="dropdown-content">
+                    <a href="#">By grade</a>
+                    <a href="#">By individual</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Financial</button>
+                <div class="dropdown-content">
+                    <a href="#">Financial report</a>
+                    <a href="#">Payment tracking</a>
+                </div>
+        </nav>
+        <div class="logout-section">
+            <a href="#">&#x2190;</a>
+        </div>
+    </div>
+
+    <button class="collapse-button">&#9776;</button>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <div class="time">08:27am</div>
+            <div class="admin-section">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="header-container">
+                <h1>View Billing</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by name">
+                    <button>&#x27A4;</button>
+                </div>
+            </div>
+            <table id="myTable2">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Invoice <span class="sort"></span></th>
+                        <th onclick="sortTable(1)">Name <span class="sort"></span></th>
+                        <th onclick="sortTable(2)">Due Date <span class="sort"></span></th>
+                        <th onclick="sortTable(3)">Amount <span class="sort"></span></th>
+                        <th>Paid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="#"><span class="invoice">#7964</span></a>
+                        </td>
+                        <td>
+                            <span class="name">Adolf Yeoh</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">30/2/2025</span>
+                        </td>
+                        <td>
+                            <span class="amount">1800</span>
+                        </td>
+                        <td class="mark">
+                            <button class="mark-btn" onclick="toggleMark(this)">&#x2610;</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><span class="invoice">#9020</span></a>
+                        </td>
+                        <td>
+                            <span class="name">Edolf Yeoh</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">21/2/2025</span>
+                        </td>
+                        <td>
+                            <span class="amount">650</span>
+                        </td>
+                        <td class="mark">
+                            <button class="mark-btn" onclick="toggleMark(this)">&#x2610;</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><span class="invoice">#7954</span></a>
+                        </td>
+                        <td>
+                            <span class="name">Bdolf Yeoh</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">30/4/2025</span>
+                        </td>
+                        <td>
+                            <span class="amount">700</span>
+                        </td>
+                        <td class="mark">
+                            <button class="mark-btn" onclick="toggleMark(this)">&#x2610;</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><span class="invoice">#7124</span></a>
+                        </td>
+                        <td>
+                            <span class="name">Cdolf Yeoh</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">31/8/2025</span>
+                        </td>
+                        <td>
+                            <span class="amount">1200</span>
+                        </td>
+                        <td class="mark">
+                            <button class="mark-btn" onclick="toggleMark(this)">&#x2610;</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"><span class="invoice">#7564</span></a>
+                        </td>
+                        <td>
+                            <span class="name">Ddolf Yeoh</span>
+                        </td>
+                        <td>
+                            <span class="dueDate">30/5/2025</span>
+                        </td>
+                        <td>
+                            <span class="amount">100</span>
+                        </td>
+                        <td class="mark">
+                            <button class="mark-btn" onclick="toggleMark(this)">&#x2610;</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="updateBilling.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Bill Grade</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="billBunch.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-section">
+            <img src="kids.jpeg">
+        </div>
+        Admin/Create bill single
+        <div class="logout-section">
+            <a href="#">&#x2190;</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="collapse-button">&#9776;</button>
+        <div class="header">
+            <div class="time">08:27am</div>
+            <div class="user">
+                <label for="role-toggle">Admin</label>
+            </div>
+        </div>
+        <section class="content">
+            <div class="header-container">
+                <h1>Create Bill by Grade</h1>
+            </div>
+
+            <div class="container">
+                <form class="form" action="#">
+                    <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <select id="grade">
+                            <option value="grade1">Grade 1</option>
+                            <option value="grade2">Grade 2</option>
+                            <option value="grade3">Grade 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Details:</label>
+                        <select id="detail1">
+                            <option value="tuition">Tuition</option>
+                        </select>
+                        <select id="detail2">
+                            <option value="lunch">Lunch</option>
+                        </select>
+                        <select id="detail3">
+                            <option value="transport">Transport</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price(RM):</label>
+                        <input type="text" id="price1" placeholder="">
+                        <input type="text" id="price2" placeholder="">
+                        <input type="text" id="price3" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Due date:</label>
+                        <div class="birthday">
+                            <input type="text" id="day" maxlength="2" placeholder="DD">
+                            <span>/</span>
+                            <input type="text" id="month" maxlength="2" placeholder="MM">
+                            <span>/</span>
+                            <input type="text" id="year" maxlength="4" placeholder="YYYY">
+                            <button type="button" id="calendar-btn">📅</button>
+                            <input type="date" id="calendar" style="display: none;" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="download">Download Invoice Preview:</label>
+                        <button class="download-btn">Download</button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>  
+    <script src="billBunch.js"></script>
+</body>
+
+</html>
