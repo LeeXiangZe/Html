@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Tracking</title>
+    <title>Fee Overview</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
     <link rel="stylesheet" href="feeOverview.css">
 </head>
@@ -69,7 +69,7 @@
 
         <section class="content">
             <div class="header-container">
-                <h1>Payment Tracking</h1>
+                <h1>Fee Overview</h1>
                 <div class="search-bar">
                     <input type="text" placeholder="Search by name">
                     <button>&#x27A4;</button>
@@ -80,11 +80,11 @@
                     <tr>
                         <th onclick="sortTable(0)"># <span class="sort"></span></th>
                         <th onclick="sortTable(1)">Name <span class="sort"></span></th>
-                        <th onclick="sortTable(2)">Grade <span class="sort"></span></th>
-                        <th onclick="sortTable(3)">Parent <span class="sort"></span></th>
-                        <th onclick="sortTable(4)">Overdue <span class="sort"></span></th>
-                        <th onclick="sortTable(5)">Due date <span class="sort"></span></th>
+                        <th onclick="sortTable(2)">Parent <span class="sort"></span></th>
+                        <th onclick="sortTable(3)">Overdue <span class="sort"></span></th>
+                        <th onclick="sortTable(4)">Due date <span class="sort"></span></th>
                         <th>Flag</th>
+                        <th>Notify</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,10 +104,10 @@
                             <span class="dueDate">23/03/2015</span>
                         </td>
                         <td class="flag">
-                            <button class="flag-btn" onclick="toggleFlag(this)">&#9873;</button>
+                            <button class="flag-btn flagged">&#9873;</button>
                         </td>
                         <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128276;</button>
+                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
                         </td>
                     </tr>
                     <tr>
@@ -129,7 +129,7 @@
                             <button class="flag-btn">&#9873;</button>
                         </td>
                         <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128276;</button>
+                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
                         </td>
                     </tr>
                     <tr>
@@ -148,10 +148,10 @@
                             <span class="dueDate">27/03/2015</span>
                         </td>
                         <td class="flag">
-                            <button class="flag-btn" onclick="toggleFlag(this)">&#9873;</button>
+                            <button class="flag-btn">&#9873;</button>
                         </td>
                         <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128276;</button>
+                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
                         </td>
                     </tr>
                     <tr>
@@ -170,10 +170,10 @@
                             <span class="dueDate">21/03/2015</span>
                         </td>
                         <td class="flag">
-                            <button class="flag-btn" onclick="toggleFlag(this)">&#9873;</button>
+                            <button class="flag-btn flagged">&#9873;</button>
                         </td>
                         <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128276;</button>
+                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
                         </td>
                     </tr>
                     <tr>
@@ -192,11 +192,11 @@
                             <span class="dueDate">03/03/2015</span>
                         </td>
                         <td class="flag">
-                            <button class="flag-btn" onclick="toggleFlag(this)">&#9873;</button>
+                            <button class="flag-btn flagged">&#9873;</button>
                         </td> 
                         <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128276;</button>
-                        </td>                       
+                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
+                        </td>                                             
                     </tr>
                 </tbody>
             </table>

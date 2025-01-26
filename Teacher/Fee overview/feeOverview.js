@@ -92,10 +92,12 @@ function sortTable(n) {
     activeSpan.innerHTML = dir === "asc" ? " &#x25B4;" : " &#x25BE;";
 }
 
-function toggleFlag(button) {
-    button.classList.toggle("flagged");
-
-    // Optionally, store the flag status in localStorage or send to the backend
-    let isFlagged = button.classList.contains("flagged");
-    console.log("Flag status:", isFlagged ? "Flagged" : "Unflagged");
+function toggleBell(button) {
+    button.classList.toggle("notified");
+    if (button.classList.contains("notified")) {
+        button.innerHTML = "&#128276;";  // Set to notified icon
+    } else {
+        button.innerHTML = "&#128277;";  // Set to unnotified icon
+    }
 }
+

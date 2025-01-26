@@ -350,11 +350,20 @@ table tbody tr:last-child td {
     font-size: 18px;
     padding: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: color 0.3s;
     border: none;
 }
 
 .flag-btn.flagged {
     color: red;
+}
+
+.notify-btn {
+    background-color: white;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+    border: none;
 }
 
