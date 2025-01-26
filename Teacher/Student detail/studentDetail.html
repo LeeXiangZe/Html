@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fee Overview</title>
+    <title>Manage Account</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
-    <link rel="stylesheet" href="feeOverview.css">
+    <link rel="stylesheet" href="manageAccount.css">
 </head>
 <body>
     <!-- Sidebar -->
@@ -63,13 +63,13 @@
         <header class="header">
             <div class="time">08:27am</div>
             <div class="admin-section">
-                <span>Teacher</span>
+                <span>Admin</span>
             </div>
         </header>
 
         <section class="content">
             <div class="header-container">
-                <h1>Fee Overview</h1>
+                <h1>Manage Account</h1>
                 <div class="search-bar">
                     <input type="text" placeholder="Search by name">
                     <button>&#x27A4;</button>
@@ -80,11 +80,9 @@
                     <tr>
                         <th onclick="sortTable(0)"># <span class="sort"></span></th>
                         <th onclick="sortTable(1)">Name <span class="sort"></span></th>
-                        <th onclick="sortTable(2)">Parent <span class="sort"></span></th>
-                        <th onclick="sortTable(3)">Overdue <span class="sort"></span></th>
-                        <th onclick="sortTable(4)">Due date <span class="sort"></span></th>
-                        <th>Flag</th>
-                        <th>Notify</th>
+                        <th onclick="sortTable(2)">Role <span class="sort"></span></th>
+                        <th onclick="sortTable(3)">Date Created <span class="sort"></span></th>
+                        <th>Delete Account</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,20 +92,14 @@
                         </td>
                         <td>
                             <span class="name">Adolf Yeoh</span></td>
-                        <td>
-                            <span class="parent">Foreen Yeoh</span>
                         </td>
                         <td>
-                            <span class="overdue">1800</span>
+                            <a href='#' span class="role">Teacher</span></a>
+                            <span class="edit">&#9998;</span>
                         </td>
+                        <td>1/1/2025</td>
                         <td>
-                            <span class="dueDate">23/03/2015</span>
-                        </td>
-                        <td class="flag">
-                            <button class="flag-btn flagged">&#9873;</button>
-                        </td>
-                        <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
+                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
                         </td>
                     </tr>
                     <tr>
@@ -116,20 +108,14 @@
                         </td>
                         <td>
                             <span class="name">Bdolf Yeoh</span></td>
-                        <td>
-                            <span class="parent">Goreen Yeoh</span>
                         </td>
                         <td>
-                            <span class="overdue">0</span>
+                            <a href='#' span class="role">Accountant</span></a>
+                            <span class="edit">&#9998;</span>
                         </td>
+                        <td>1/2/2025</td>
                         <td>
-                            <span class="dueDate">25/03/2015</span>
-                        </td>
-                        <td class="flag">
-                            <button class="flag-btn">&#9873;</button>
-                        </td>
-                        <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
+                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
                         </td>
                     </tr>
                     <tr>
@@ -138,20 +124,14 @@
                         </td>
                         <td>
                             <span class="name">Cdolf Yeoh</span></td>
-                        <td>
-                            <span class="parent">Horeen Yeoh</span>
                         </td>
                         <td>
-                            <span class="overdue">0</span>
+                            <a href='#' span class="role">Teacher</span></a>
+                            <span class="edit">&#9998;</span>
                         </td>
+                        <td>1/6/2025</td>
                         <td>
-                            <span class="dueDate">27/03/2015</span>
-                        </td>
-                        <td class="flag">
-                            <button class="flag-btn">&#9873;</button>
-                        </td>
-                        <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
+                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
                         </td>
                     </tr>
                     <tr>
@@ -160,20 +140,14 @@
                         </td>
                         <td>
                             <span class="name">Ddolf Yeoh</span></td>
-                        <td>
-                            <span class="parent">Ioreen Yeoh</span>
                         </td>
                         <td>
-                            <span class="overdue">500</span>
+                            <a href='#' span class="role">Parent</span></a>
+                            <span class="edit">&#9998;</span>
                         </td>
+                        <td>15/1/2025</td>
                         <td>
-                            <span class="dueDate">21/03/2015</span>
-                        </td>
-                        <td class="flag">
-                            <button class="flag-btn flagged">&#9873;</button>
-                        </td>
-                        <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
+                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
                         </td>
                     </tr>
                     <tr>
@@ -182,26 +156,20 @@
                         </td>
                         <td>
                             <span class="name">Edolf Yeoh</span></td>
-                        <td>
-                            <span class="parent">Joreen Yeoh</span>
                         </td>
                         <td>
-                            <span class="overdue">1200</span>
+                            <a href='#' span class="role">Parent</span></a>
+                            <span class="edit">&#9998;</span>
                         </td>
+                        <td>2/2/2025</td>
                         <td>
-                            <span class="dueDate">03/03/2015</span>
+                            <button class="delete-btn" onclick="deleteAccount(this)">&#128100; &#10060;</button>
                         </td>
-                        <td class="flag">
-                            <button class="flag-btn flagged">&#9873;</button>
-                        </td> 
-                        <td class="notify">
-                            <button class="notify-btn" onclick="toggleBell(this)">&#128277;</button>
-                        </td>                                             
                     </tr>
                 </tbody>
             </table>
         </section>
     </div>
-    <script src="feeOverview.js"></script>
+    <script src="manageAccount.js"></script>
 </body>
 </html>
